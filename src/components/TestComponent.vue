@@ -1,24 +1,19 @@
 <template>
-  <div class="foo">
-    <h1></h1>
-    <button id="change-message" v-on:click="changeMessage">Change message</button>
-	  <p></p>
-  </div>
+    <div>
+        <input class="checkboxTest" type="checkbox" v-model="cbVal">
+        <input class="inputTest" type="text" v-model="textVal">
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'hello',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    };
-  },
-  props: ['passedProp'],
-  methods: {
-    changeMessage() {
-      this.msg = 'new message'
-    }
-  }
-}
+    define([], function() {
+        return {
+            data: function() {
+                return {
+                    cbVal: false,
+                    textVal: ""
+                }
+            }
+        }
+    })
 </script>
